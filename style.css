@@ -1,0 +1,594 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+  min-height: 1px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+section > .container {
+  margin: 100px auto;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*NAV*/
+header {
+  background-color: #313332;
+  height: 100%;
+  overflow: auto;
+}
+
+header > nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+}
+
+header > nav ul > li > a {
+  line-height: 60px;
+  padding: 0 20px;
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+header > nav > img {
+  display: block;
+  float: left;
+  padding: 15px 0;
+}
+
+header > nav ul > li > a:hover {
+  color: #5bb5d8;
+}
+
+/*JUMBOTRON*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url("https://i.postimg.cc/mgdvh8Zj/beverage-computer-cup-1638775.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.slogan {
+  /*w wersji mobilnej zmienić tylko padding: 20px; max-width np. 80%, dajemy left 50%(right 50%?) i transform translate(-50%, -50%) */
+  position: absolute;
+  max-width: 50%;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 20px 30% 20px 20px;
+}
+
+.slogan-thin {
+  font-size: 24px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/*GRID*/
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-offset-1 {
+  margin-left: 8.33%;
+}
+
+.col-offset-2 {
+  margin-left: 16.66%;
+}
+
+.col-offset-3 {
+  margin-left: 25%;
+}
+
+.col-offset-4 {
+  margin-left: 33.33%;
+}
+
+.col-offset-5 {
+  margin-left: 41.66%;
+}
+
+.col-offset-6 {
+  margin-left: 50%;
+}
+
+.col-offset-7 {
+  margin-left: 58.33%;
+}
+
+.col-offset-8 {
+  margin-left: 66.66%;
+}
+
+.col-offset-9 {
+  margin-left: 75%;
+}
+
+.col-offset-10 {
+  margin-left: 83.33%;
+}
+
+.col-offset-11 {
+  margin-left: 91.66%;
+}
+
+/*BENEFITS*/
+.button-benefits {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: #000;
+  color: #FFF;
+  border-radius: 25%;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button-benefits .header-benefits {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.benefits-hover:hover .button-benefits {
+  background-color: #5bb5d8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.benefits-hover:hover .header-benefits {
+  color: #5bb5d8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/*FEATURED WORKS*/
+.featured-works div > .works-header {
+  font-size: 50px;
+}
+
+.featured-works .works-header {
+  margin-top: 150px;
+}
+
+.featured-works .container {
+  margin-bottom: 50px;
+}
+
+/*GALLERY*/
+.photo {
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.photo:hover .layer {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.button-gallery {
+  display: none;
+  border: none;
+  padding: 10px;
+  border-radius: 25%;
+  margin: 20px;
+}
+
+.photo:hover .button-gallery {
+  display: inline-block;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+/*TEAM*/
+.crew {
+  margin: 0;
+  padding: 20px;
+}
+
+.team-overlay {
+  position: relative;
+}
+
+.team-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 50%;
+}
+
+.team img {
+  display: block;
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+.team span {
+  font-size: 1.3em;
+  color: #FFF;
+  position: relative;
+  top: 45%;
+  visibility: hidden;
+}
+
+.team-layer:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.crew:hover span {
+  visibility: visible;
+}
+
+.crew h3 {
+  font-weight: 600;
+}
+
+/*SECTION WITH PICTURE (TABLET)*/
+/*do mobile przyklejenie tabletu na stałem do dołu sekcji*/
+.picture {
+  /*.picture dać position relative, .picture img absolute i bottom:0*/
+  width: 100%;
+  background-image: url("https://i.postimg.cc/gJ2z9RXw/pexels-photo-172285.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.picture img {
+  border-radius: 5%;
+  position: relative;
+  bottom: -100px;
+  max-width: 100%;
+}
+
+.picture-half {
+  overflow: hidden;
+}
+
+.picture-title {
+  font-size: 40px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 180px;
+  margin-bottom: 0;
+}
+
+.picture p {
+  color: #FFF;
+  text-align: left;
+  font-size: 18px;
+  padding-top: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/*NUMBERS*/
+.numbers-number {
+  font-size: 100px;
+  font-family: 'Crimson Text', serif;
+  color: #313234;
+  margin: 0;
+}
+
+.numbers-description {
+  font-size: 30px;
+  font-family: 'Luckiest Guy', cursive;
+  color: #5bb5d8;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: 0;
+}
+
+/*SUMMARY*/
+.summary {
+  background-color: #313332;
+  color: #FFF;
+  margin-bottom: 0;
+}
+
+.summary p, .summary-title, i, .social {
+  text-align: left;
+}
+
+.summary .button-social {
+  width: 40px;
+  height: 40px;
+  background-color: #5bb5d8;
+  border: none;
+  color: #FFF;
+  margin: 5px;
+  font-size: 25px;
+}
+
+.button-social a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.summary .container {
+  margin-bottom: 0;
+}
+
+.address p {
+  margin-top: -9px;
+}
+
+.summary-title {
+  position: relative;
+  font-size: 25px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.summary-title::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  top: 17px;
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+.summary-title span {
+  padding-right: 30px;
+}
+
+/*FOOTER*/
+.footer {
+  text-align: center;
+  background-color: #000;
+  color: #FFF;
+  padding: 20px;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+  section > .container {
+    margin: 25px auto;
+  }
+  /*HEADER*/
+  header > nav > ul {
+    float: none;
+  }
+  nav > ul > li {
+    display: block;
+  }
+  header > nav ul > li > a:hover {
+    color: #FFF;
+  }
+  header {
+    text-align: center;
+  }
+  header > nav > img {
+    display: inline-block;
+    float: none;
+    padding-bottom: 0;
+  }
+  header > nav ul > li > a {
+    line-height: 40px;
+  }
+  /*JUMBOTRON*/
+  .slogan {
+    /*jeżeli chcemy żeby był na środku dajemy left 50% i transform translate(-50%, -50%)*/
+    padding: 20px;
+    max-width: 80%;
+  }
+  /*BENEFITS*/
+  .benefits-hover:hover .button-benefits {
+    background-color: #000;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .benefits-hover:hover .header-benefits {
+    color: #000;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .button-benefits {
+    height: 75px;
+    width: 75px;
+  }
+  .benefits div h2 {
+    font-size: 1.3em;
+  }
+  /*FEATURED WORKS*/
+  .featured-works div .works-header {
+    margin-top: 50px;
+    font-size: 35px;
+  }
+  /*GALLERY*/
+  .photo:hover .layer {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .button-gallery {
+    display: inline-block;
+    padding: 5px;
+  }
+  .buttons {
+    top: 90%;
+  }
+  /*TEAM*/
+  .team-layer:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .crew span {
+    visibility: visible;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  /*SECTION WITH PICTURE*/
+  .picture .picture-title {
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .picture img {
+    position: static;
+    height: 50%;
+    width: 50%;
+  }
+  .picture-italic-paragraf {
+    margin-top: 0;
+  }
+  .picture-paragraf {
+    margin-bottom: 0;
+  }
+  /*NUMBERS*/
+  .numbers-number {
+    font-size: 50px;
+  }
+  .numbers-description {
+    font-size: 16px;
+  }
+  /*SUMMARY*/
+  .social {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/PawelZurawka/NPMlearning/issues"
   },
-  "homepage": "https://github.com/PawelZurawka/NPMlearning#readme"
+  "homepage": "https://github.com/PawelZurawka/NPMlearning#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
 }
